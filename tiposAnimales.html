@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de Animales</title>
+    <link rel="stylesheet" href="animales.css">
+</head>
+<body>
+    <header>
+        <img src="./imagenes/logo.png" alt="Logo de Cultura Animal">
+        <h1>Cultura Animal</h1>
+        <p>Explorando la diversidad del reino animal de una manera natural</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./tiposAnimales.html">Animales</a>
+                <ul>
+                    <li><a href="#mamiferos" onclick="mostrarSeccion('mamiferos')">Mamíferos</a></li>
+                    <li><a href="#anfibios" onclick="mostrarSeccion('anfibios')">Anfibios</a></li>
+                    <li><a href="#reptiles" onclick="mostrarSeccion('reptiles')">Reptiles</a></li>
+                    <li><a href="#peces" onclick="mostrarSeccion('peces')">Peces</a></li>
+                    <li><a href="#aves" onclick="mostrarSeccion('aves')">Aves</a>
+                        <ul>
+                            <li><a href="./animales/aguila.html">Águila</a></li>
+                            <li><a href="./animales/colibri.html">Colibrí</a></li>
+                            <li><a href="./animales/pinguino.html">Pingüino</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#insectos" onclick="mostrarSeccion('insectos')">Insectos</a></li>
+                    <li><a href="#artropodos" onclick="mostrarSeccion('artropodos')">Artrópodos</a></li>
+                    <li><a href="#crustaceos" onclick="mostrarSeccion('crustaceos')">Crustáceos</a></li>
+                    <li><a href="#moluscos" onclick="mostrarSeccion('moluscos')">Moluscos</a></li>
+                    <li><a href="#aracnidos" onclick="mostrarSeccion('aracnidos')">Arácnidos</a></li>
+                    <li><a href="#anelidos" onclick="mostrarSeccion('anelidos')">Anélidos</a></li>
+                    <li><a href="#gasteropodos" onclick="mostrarSeccion('gasteropodos')">Gasterópodos</a></li>
+                </ul>
+            </li>
+            <li><a href="./Galería.html">Galería</a></li>
+            <li><a href="./Apadrinar.html">Apadrina un animal</a></li>
+            <li><a href="./Contacto.html">Formulario de contacto</a></li> 
+        </ul>
+        <select id="languageSelector">
+            <option value="es">Español</option>
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="de">Deutsch</option>
+            <option value="pt">Português</option>
+        </select>
+        <input type="text" id="searchBar" placeholder="Buscar..." aria-label="Buscar">
+    </nav>
+
+    <main>
+        <section class="tipo-animal" id="mamiferos">
+            <h2>Mamíferos</h2>
+            <img src="./imagenes/mamiferos.jpg" alt="Imagen de mamíferos">
+            <p>Los mamíferos son animales vertebrados de sangre caliente que poseen glándulas mamarias para alimentar a sus crías.</p>
+            <ul>
+                <li><a href="./animales/tigre.html">Tigre</a></li>
+                <li><a href="./animales/elefante.html">Elefante</a></li>
+                <li><a href="./animales/leon.html">León</a></li>
+                <li><a href="./animales/ballena.html">Ballena</a></li>
+            </ul>
+        </section>
+        <section class="tipo-animal" id="aves">
+            <h2>Aves</h2>
+            <img src="./imagenes/aves.jpg" alt="Imagen de aves">
+            <p>Las aves son animales vertebrados de sangre caliente que tienen plumas y alas.</p>
+            <ul>
+                <li><a href="./animales/aguila.html">Águila</a></li>
+                <li><a href="./animales/colibri.html">Colibrí</a></li>
+                <li><a href="./animales/pinguino.html">Pingüino</a></li>
+            </ul>
+        </section>
+        <!-- Agrega más secciones para otros tipos de animales aquí -->
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Cultura Animal. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function mostrarSeccion(id) {
+            document.querySelectorAll('.tipo-animal').forEach(function(section) {
+                section.style.display = 'none';
+            });
+            document.getElementById(id).style.display = 'block';
+        }
+
+        document.getElementById('languageSelector').addEventListener('change', function() {
+            i18next.changeLanguage(this.value, updateContent);
+        });
+
+        document.getElementById('searchBar').addEventListener('keyup', function() {
+            let filter = this.value.toLowerCase();
+            let cards = document.querySelectorAll('.card');
+            
+            cards.forEach(function(card) {
+                let text = card.innerText.toLowerCase();
+                if (text.includes(filter)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

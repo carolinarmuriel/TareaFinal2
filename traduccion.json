@@ -1,0 +1,57 @@
+{
+    "es": {
+      "home": "Inicio",
+      "animals": "Animales",
+      "gallery": "Galería",
+      "adopt": "Apadrina un animal",
+      "contact": "Contacto",
+      "welcome": "Bienvenidos",
+      "featured_animals": "Animales Destacados",
+      "articles": "Artículos Recientes",
+      "knowledge_test": "Test de Conocimiento"
+    },
+    "en": {
+      "home": "Home",
+      "animals": "Animals",
+      "gallery": "Gallery",
+      "adopt": "Adopt an Animal",
+      "contact": "Contact",
+      "welcome": "Welcome",
+      "featured_animals": "Featured Animals",
+      "articles": "Recent Articles",
+      "knowledge_test": "Knowledge Test"
+    },
+    "fr": {
+      "home": "Accueil",
+      "animals": "Animaux",
+      "gallery": "Galerie",
+      "adopt": "Adoptez un animal",
+      "contact": "Contact",
+      "welcome": "Bienvenue",
+      "featured_animals": "Animaux en vedette",
+      "articles": "Articles récents",
+      "knowledge_test": "Test de Connaissance"
+    },
+    "de": {
+      "home": "Startseite",
+      "animals": "Tiere",
+      "gallery": "Galerie",
+      "adopt": "Adoptiere ein Tier",
+      "contact": "Kontakt",
+      "welcome": "Willkommen",
+      "featured_animals": "Besondere Tiere",
+      "articles": "Aktuelle Artikel",
+      "knowledge_test": "Wissenstest"
+    },
+    "pt": {
+      "home": "Início",
+      "animals": "Animais",
+      "gallery": "Galeria",
+      "adopt": "Adote um animal",
+      "contact": "Contato",
+      "welcome": "Bem-vindos",
+      "featured_animals": "Animais em Destaque",
+      "articles": "Artigos Recentes",
+      "knowledge_test": "Teste de Conhecimento"
+    }
+  }

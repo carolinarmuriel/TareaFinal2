@@ -1,0 +1,263 @@
+/* General, colores. */
+:root {
+    --primario: #D2B48C;
+    --secundario: #4CAF50;
+    --fondo: #f4f4f4;
+    --texto: #333;
+    --hover: #388E3C;
+    --sombra: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: var(--fondo);
+    color: var(--texto);
+}
+
+h1, h2, h3 {
+    margin-bottom: 10px;
+    color: var(--primario);
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+/* ENCABEZADO */
+header {
+    background: linear-gradient(45deg, var(--primario), var(--secundario));
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px var(--sombra);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header img {
+    max-width: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 10px 0;
+}
+
+/* NAVEGACIÓN */
+nav {
+    background-color: var(--primario);
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    box-shadow: 0 4px 8px var(--sombra);
+    flex-wrap: wrap;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav li {
+    position: relative;
+}
+
+nav li a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+nav li a:hover {
+    background-color: var(--hover);
+    transform: scale(1.05);
+}
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--primario);
+    padding: 0;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    z-index: 10;
+    flex-direction: column;
+}
+
+nav ul ul ul {
+    top: 0;
+    left: 100%;
+    margin-left: 1px;
+}
+
+nav ul ul li {
+    width: 200px;
+}
+
+nav ul ul li a {
+    padding: 10px 20px;
+}
+
+nav li:hover > ul {
+    display: flex;
+}
+
+nav li ul li {
+    display: block;
+}
+
+nav li ul li a {
+    padding: 10px;
+    width: 150px;
+}
+
+/* Styles for the language selector */
+#languageSelector {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-left: 10px;
+    background-color: #f9f9f9;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Styles for the search bar */
+#searchBar {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-left: 10px;
+    width: 200px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+#searchBar::placeholder {
+    color: #aaa;
+}
+
+/* CONTENEDORES */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+/*Listas*/
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li::before {
+    /* content: "🐾 "; */
+    color: var(--primario);
+    margin-right: 5px;
+}
+
+/* GALERÍA */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--sombra);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    flex: 1 1 250px;
+    max-width: 300px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card h3 {
+    margin: 10px;
+    color: var(--secundario);
+}
+
+.card p {
+    margin: 10px;
+    color: var(--texto);
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* PIE DE PÁGINA */
+footer {
+    text-align: center;
+    background: var(--primario);
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin-bottom: 10px;
+    }
+
+    nav select, nav input {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: none;
+    }
+}

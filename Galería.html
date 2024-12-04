@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Animales</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">  
+    <!-- Fuente de google fonts -->
+    <link rel="stylesheet" href="galeria.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <img src="./imagenes/logo.png" alt="Logo de Cultura Animal">
+        <h1>Cultura Animal</h1>
+        <p>Explorando la diversidad del reino animal de una manera natural</p>
+    </header>
+    <!-- Navegación -->
+    <nav>
+        <ul>
+            <li><a href="./index.html">Inicio</a></li>
+            <li>
+                <a href="./tiposAnimales.html">Animales</a>
+                <ul>
+                    <li><a href="#mamiferos" onclick="mostrarSeccion('mamiferos')">Mamíferos</a></li>
+                    <li><a href="#anfibios" onclick="mostrarSeccion('anfibios')">Anfibios</a></li>
+                    <li><a href="#reptiles" onclick="mostrarSeccion('reptiles')">Reptiles</a></li>
+                    <li><a href="#peces" onclick="mostrarSeccion('peces')">Peces</a></li>
+                    <li><a href="#aves" onclick="mostrarSeccion('aves')">Aves</a></li>
+                    <li><a href="#insectos" onclick="mostrarSeccion('insectos')">Insectos</a></li>
+                    <li><a href="#artropodos" onclick="mostrarSeccion('artropodos')">Artrópodos</a></li>
+                    <li><a href="#crustaceos" onclick="mostrarSeccion('crustaceos')">Crustáceos</a></li>
+                    <li><a href="#moluscos" onclick="mostrarSeccion('moluscos')">Moluscos</a></li>
+                    <li><a href="#aracnidos" onclick="mostrarSeccion('aracnidos')">Arácnidos</a></li>
+                    <li><a href="#anelidos" onclick="mostrarSeccion('anelidos')">Anélidos</a></li>
+                    <li><a href="#gasteropodos" onclick="mostrarSeccion('gasteropodos')">Gasterópodos</a></li>
+                </ul>
+            </li>
+            <li><a href="./Galería.html">Galeria</a></li>
+            <li><a href="./Apadrinar.html">Apadrina un animal</a></li>
+            <li><a href="./Contacto.html">Formulario de contacto</a></li>    
+        </ul>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="container">
+        <section class="tipo-animal" id="mamiferos">
+            <h2>Mamíferos</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="./imagenes/leon.jpg" alt="León">
+                    <h3>León</h3>
+                    <p>El león es conocido como el rey de la selva. Vive en las sabanas y pastizales de África.</p>
+                </div>
+                <div class="card">
+                    <img src="./imagenes/tigre.jpg" alt="Tigre">
+                    <h3>Tigre</h3>
+                    <p>El tigre es el felino más grande del mundo y se encuentra principalmente en Asia.</p>
+                </div>
+                <div class="card">
+                    <img src="./imagenes/elefante.jpg" alt="Elefante">
+                    <h3>Elefante</h3>
+                    <p>El elefante es el animal terrestre más grande y es conocido por su inteligencia y memoria.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="tipo-animal" id="anfibios">
+            <h2>Anfibios</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="./imagenes/rana.jpg" alt="Rana">
+                    <h3>Rana</h3>
+                    <p>Las ranas son conocidas por sus saltos y su piel húmeda. Viven en ambientes húmedos.</p>
+                </div>
+                <div class="card">
+                    <img src="./imagenes/salamandra.jpg" alt="Salamandra">
+                    <h3>Salamandra</h3>
+                    <p>Las salamandras tienen cuerpos largos y delgados y pueden regenerar partes de su cuerpo.</p>
+                </div>
+                <div class="card">
+                    <img src="./imagenes/triton.jpg" alt="Tritón">
+                    <h3>Tritón</h3>
+                    <p>Los tritones son anfibios que pasan parte de su vida en el agua y parte en la tierra.</p>
+                </div>
+            </div>
+        </section>
+        <section class="tipo-animal" id="reptiles">
+            <h2>Reptiles</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="./imagenes/cocodrilo.jpg" alt="Cocodrilo">
+                    <h3>Cocodrilo</h3>
+                    <p>El cocodrilo es un reptil grande que vive en ríos y lagos de regiones tropicales.</p>
+                </div>
+                <div class="card">
+                    <img src="./imagenes/serpiente.jpg" alt="Serpiente">
+                    <h3>Serpiente</h3>
+                    <p>Las serpientes son reptiles sin patas que se encuentran en una variedad de hábitats.</p>
+                </div>
+                <div class="card">
+                    <img src="./imagenes/iguana.jpg" alt="Iguana">
+                    <h3>Iguana</h3>
+                    <p>Las iguanas son reptiles que viven en regiones tropicales y son conocidas por su piel escamosa.</p>
+                </div>
+            </div>
+        </section>
+    
+        <section class="tipo-animal" id="peces">
+            <h2>Peces</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="./imagenes/salmon.jpg" alt="Salmón">
+                    <h3>Salmón</h3>
+                    <p>El salmón es un pez que migra entre el océano y los ríos para reproducirse.</p>
+                </div>
+                <div class="card">
+                    <img src="./imagenes/tiburon.jpg" alt="Tiburón">
+                    <h3>Tiburón</h3>
+                    <p>El tiburón es un pez grande y depredador que vive en los océanos.</p>
+                </div>
+                <div class="card">
+                    <img src="./imagenes/pezPayaso.jpg" alt="Pez Payaso">
+                    <h3>Pez Payaso</h3>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <footer>
+        <p>&copy; 2024 Cultura Animal. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

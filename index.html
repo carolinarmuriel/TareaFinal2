@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cultura Animal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="index.css">
+    <script src="https://unpkg.com/i18next@21.6.3/dist/umd/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector@6.1.2/dist/umd/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="https://unpkg.com/i18next-http-backend@1.3.1/dist/umd/i18nextHttpBackend.min.js"></script>
+</head>
+<body>
+        <!-- Encabezado -->
+        <header>
+            <img src="./imagenes/logo.png" alt="Logo de Cultura Animal">
+            <h1>Cultura Animal</h1>
+            <p>Explorando la diversidad del reino animal de una manera natural</p>
+            </header>
+            <!-- Navegación -->
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li>
+                        <a href="./tiposAnimales.html">Animales</a>
+                        <ul>
+                            <li><a href="#mamiferos" onclick="mostrarSeccion('mamiferos')">Mamíferos</a></li>
+                            <li><a href="#anfibios" onclick="mostrarSeccion('anfibios')">Anfibios</a></li>
+                            <li><a href="#reptiles" onclick="mostrarSeccion('reptiles')">Reptiles</a></li>
+                            <li><a href="#peces" onclick="mostrarSeccion('peces')">Peces</a></li>
+                            <li><a href="#aves" onclick="mostrarSeccion('aves')">Aves</a></li>
+                            <li><a href="#insectos" onclick="mostrarSeccion('insectos')">Insectos</a></li>
+                            <li><a href="#artropodos" onclick="mostrarSeccion('artropodos')">Artrópodos</a></li>
+                            <li><a href="#crustaceos" onclick="mostrarSeccion('crustaceos')">Crustáceos</a></li>
+                            <li><a href="#moluscos" onclick="mostrarSeccion('moluscos')">Moluscos</a></li>
+                            <li><a href="#aracnidos" onclick="mostrarSeccion('aracnidos')">Arácnidos</a></li>
+                            <li><a href="#anelidos" onclick="mostrarSeccion('anelidos')">Anélidos</a></li>
+                            <li><a href="#gasteropodos" onclick="mostrarSeccion('gasteropodos')">Gasterópodos</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./Galería.html">Galería</a></li>
+                    <li><a href="./Apadrinar.html">Apadrina un animal</a></li>
+                    <li><a href="./Contacto.html">Contacto</a></li>
+                </ul>
+                <select id="languageSelector">
+                    <option value="es">Español</option>
+                    <option value="en">English</option>
+                    <option value="fr">Français</option>
+                    <option value="de">Deutsch</option>
+                    <option value="pt">Português</option>
+                </select>
+                <input type="text" id="searchBar" placeholder="Buscar..." aria-label="Buscar">
+            </nav>
+    <!-- Contenido principal -->
+    <div class="container">
+        <!-- Sección Inicio -->
+        <section id="inicio">
+            <h2 data-translate="welcome">Bienvenidos</h2>
+            <p>Descubre la increíble diversidad del reino animal a través de nuestras secciones dedicadas a diferentes especies y hábitats.</p>
+        </section>
+
+        <!-- Sección de Animales Destacados -->
+        <section id="animales-destacados">
+            <h2 data-translate="featured_animals">Animales Destacados</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="./imagenes/leon.jpg" alt="León">
+                    <h3>León</h3>
+                    <p>El león es conocido como el rey de la selva. Vive en las sabanas y pastizales de África.</p>
+                </div>
+                <div class="card">
+                    <img src="./imagenes/tigre.jpg" alt="Tigre">
+                    <h3>Tigre</h3>
+                    <p>El tigre es el felino más grande del mundo y se encuentra principalmente en Asia.</p>
+                </div>
+                <div class="card">
+                    <img src="./imagenes/elefante.jpg" alt="Elefante">
+                    <h3>Elefante</h3>
+                    <p>El elefante es el animal terrestre más grande y es conocido por su inteligencia y memoria.</p>
+                </div>
+                <div class="card">
+                    <img src="./imagenes/aguila.jpg" alt="Águila">
+                    <h3>Águila</h3>
+                    <p>El águila es un ave de presa majestuosa que se encuentra en todo el mundo.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Artículos -->
+        <section id="articulos">
+            <h2 data-translate="articles">Artículos Recientes</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="./imagenes/ratasconducir.jpg" alt="Ratas que aprendieron a conducir">
+                    <h3><a href="https://www.nationalgeographic.com.es/mundo-animal/estas-ratas-aprendieron-conducir-ahora-no-pueden-parar-hacerlo_23696" target="_blank">Estas ratas aprendieron a conducir y ahora no pueden parar de hacerlo</a></h3>
+                    <p>Descubre cómo estas ratas han aprendido a conducir y qué significa esto para la ciencia.</p>
+                </div>
+                <div class="card">
+                    <img src="./imagenes/panda.jpg" alt="Animales más tranquilos y chill">
+                    <h3><a href="https://www.nationalgeographic.com.es/mundo-animal/animales-mas-tranquilos-y-chill_23764" target="_blank">Animales más tranquilos y chill</a></h3>
+                    <p>Conoce a los animales más relajados del reino animal y sus hábitos de vida.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Test -->
+        <section id="test">
+            <h2 data-translate="knowledge_test">¿Qué animal eres según tu personalidad?</h2>
+            <div class="card">
+                <img src="./imagenes/pandaRojo.jpg" alt="¿Qué animal eres según tu personalidad?">
+                <h3><a href="https://www.mundodeportivo.com/uncomo/educacion/test/test-que-animal-soy-segun-mi-personalidad-43746.html" target="_blank">¿Qué animal eres según tu personalidad?</a></h3>
+                <p>Adivina que animal eres con este test interactivo.</p>
+            </div>
+        </section>
+    </div>
+    <footer>
+      <p>&copy; 2024 Cultura Animal. Todos los derechos reservados.</p>
+  </footer>
+    <!-- Vincular script externo -->
+    <script>
+        i18next
+          .use(i18nextHttpBackend)
+          .use(i18nextBrowserLanguageDetector)
+          .init({
+            fallbackLng: 'es',
+            backend: {
+              loadPath: '/locales/traduccion.json'
+            }
+          }, function(err, t) {
+            updateContent();
+          });
+      
+        function updateContent() {
+          document.querySelectorAll('[data-translate]').forEach(function(element) {
+            element.innerText = i18next.t(element.getAttribute('data-translate'));
+          });
+        }
+      
+        document.getElementById('languageSelector').addEventListener('change', function() {
+          i18next.changeLanguage(this.value, updateContent);
+        });
+      
+        document.getElementById('searchBar').addEventListener('keyup', function() {
+          let filter = this.value.toLowerCase();
+          let cards = document.querySelectorAll('.card');
+          
+          cards.forEach(function(card) {
+            let text = card.innerText.toLowerCase();
+            if (text.includes(filter)) {
+              card.style.display = '';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      </script>
+</body>
+</html>
